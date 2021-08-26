@@ -1,0 +1,2 @@
+import lammps as lmp 
+ 
