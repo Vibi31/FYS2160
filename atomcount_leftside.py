@@ -44,6 +44,9 @@ if freq_histogram == True:
             rest.append(i)
     tot_bins = len(rest)
 
+    #print number of times Nl has different values
+    print('number of times Nl has different values: ', tot_bins)
+    print('')
     #plotting the histogram
     plt.hist(nleft, bins = tot_bins)
     plt.style.use('ggplot')
