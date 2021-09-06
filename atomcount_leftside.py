@@ -5,9 +5,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from ase.io import read
 
+
 fil = 'dump.uke35'          #write file name inside paranthesis
 traj = read(fil, format="lammps-dump-text", index=":")
 n = len(traj)                   # Number of timesteps
+print('number of timesteps = ', n)
 nleft = np.zeros(n, dtype=np.int)
 
 #choose what graphs i need:
@@ -53,6 +55,13 @@ if freq_histogram == True:
     plt.xlabel('number of atom/particle on the left side')
     plt.ylabel('frequency')
     plt.title('histogram of atom/particle number frequency')
+    plt.show()
+
+    #normalising the curve, area = 1
+    normalised = rest/(np.sum(rest))
+    print(normalised)
+    x_normal = np.linspace(0,np.max(rest), len(rest))
+    plt.plot(x_normal, normalised)
     plt.show()
 
     
