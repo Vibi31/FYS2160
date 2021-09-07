@@ -57,7 +57,7 @@ if freq_histogram == True:
     plt.title('histogram of atom/particle number frequency')
     plt.show()
 
-    #normalising the curve, area = 1
+    #normalising the curve, area = 1, work in progress
     normalised = rest/(np.sum(rest))
     print(normalised)
     x_normal = np.linspace(0,np.max(rest), len(rest))
