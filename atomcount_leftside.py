@@ -1,4 +1,4 @@
-#from operator import truediv
+#from operator import truediv and
 """graph analysis code used from statphys_python.pdf, histogram/frequency chart written by me"""
 
 import matplotlib.pyplot as plt
@@ -15,6 +15,7 @@ nleft = np.zeros(n, dtype=np.int)
 #choose what graphs i need:
 graph = True #False
 freq_histogram = True #False
+nomrmalised = True #false
 
 # Find size of simulation box
 firstframe = traj[0]
@@ -57,6 +58,7 @@ if freq_histogram == True:
     plt.title('histogram of atom/particle number frequency')
     plt.show()
 
+if nomrmalised == True:
     #normalising the curve, area = 1, trying to get a bell curve
     normalised = rest/(np.sum(rest))
     print(normalised)
