@@ -29,9 +29,12 @@ t = np.array(time)
 t1 = np.array(temp1)
 t2 = np.array(temp2)
 
-tau =  3773
+#tau = 5180     #Bodus mug
+tau = 5598      #Temperfect mug
 #tau = 6700 #guess
-exp_f =   np.max(t1)*exp(-t/tau)
+#tau = np.max(t1)  
+print(tau)
+exp_f = np.max(t1)*(exp(-t/tau))
 
 print('max temp of Bodus mug:',np.max(t1))
 print('max temp of Temperfect mug:',np.max(t2))
@@ -42,7 +45,7 @@ plt.xlabel('time (seconds)')
 plt.ylabel('temperature (celsius)')
 plt.plot(t, t1, label="temp1")
 plt.plot(t, t2, label="temperfect mug")
-plt.plot(t, exp_f, label="exponential approx.")
+plt.plot(t, exp_f, label="e approx. of Temperfect")
 
 plt.legend()
 plt.show()
