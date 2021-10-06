@@ -19,7 +19,7 @@ plt.show()
 """
 
 #oppgave R
-Cv = N*delta_e*exp(delta_e/(T*Kb))/(((Kb*T**2)*(exp(delta_e/(T*Kb))+1)**2))#heat capacity [J/K]
+Cv = N*exp(delta_e/(T*Kb))/(((Kb*T**2)*(exp(delta_e/(T*Kb))+1)**2))#heat capacity [J/K]
 
 plt.title('Heat capacity as a function of temperature')
 plt.xlabel('Heat capacity [J/K]')
